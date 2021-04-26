@@ -519,8 +519,6 @@ Considerando o cenário descrito e as boas práticas de administração de banco
 
 Desenvolver a instrução SQL e destinar-a para a equipe de desenvolvimento para que vinculem com a regra de negócio da aplicação.
 
- 
-
 
 Criar de uma PROCEDURE que colete as informaçõesdas tabelas dos demais departamentos envolvidos e consolide em uma tabela criada para o departamento de vendas, assim realizando a consulta a partir dessa tabela.
 
@@ -529,6 +527,7 @@ Criar uma VIEW com a instrução SQL necessária e posteriormente conceder permi
 
 
 Considerando a segurança necessária, desenvolver um script externo, por exemplo shell ou bat, que coletaria essas informações do banco de dados e gravaria em um arquivo .txt que seria disponibilizado posteriormente para o departamento de vendas.
+
 
 Questão 22
 Ao executar o código abaixo, quando chegar na linha 7 (comentada no código), quantos objetos do tipo Customer estarão elegíveis para o Garbage Collector?
@@ -556,6 +555,7 @@ Nenhum
 
 
 1
+// https://www.devmedia.com.br/introducao-ao-java-garbage-collection/30326
 
 Questão 23
 As Collections são um conjunto de classes e interfaces em JAVA que representam estruturas de dados avançadas. Sobre elas, é correto o que se afirma em:
@@ -564,7 +564,7 @@ As Collections são um conjunto de classes e interfaces em JAVA que representam 
 A interface LIST é uma coleção que não permite a adição de valores duplicados e mantém uma ordenação específica entre os elementos
 
 
-A interface MAP é uma das interfaces que estende de Collections
+A interface MAP é uma das interfaces que estende de Collections - ERRADA 
 
 
 A interface SET é uma coleção que não permite elementos duplicados e a ordem em que os elementos são armazenados pode não ser a ordem na qual eles foram inseridos.
@@ -574,6 +574,9 @@ Algumas das implementações possíveis da interface SET são ArrayList e Linked
 
 
 Algumas das implementações possíveis da interface LIST são HashSet, TreeSet e LinkedHashSet
+
+//https://www.caelum.com.br/apostila-java-orientacao-objetos/collections-framework#percorrendo-colecoes-no-java-5
+
 
 Questão 24
 Dado o código abaixo, qual os textos exibidos no console? (considere que todas as classes estão no mesmo pacote) public class A { public void print() { System.out.println("Print A"); } } public class B extends A { public void print() { System.out.println("Print B"); } } public class C extends B { public void print() { System.out.println("Print C"); } } public class MainClass { public static void main(String[] args) { A a1 = new B(); a1.print(); A a2 = new C(); a2.print(); B b = new C(); b.print(); } }
@@ -596,19 +599,21 @@ Questão 25
 Referente a estruturas de dados, é INCORRETO afirmar:
 
 
-Uma lista encadeada é uma coleção linear de objetos de uma classe autoreferenciada, chamados de nós.
+Uma lista encadeada é uma coleção linear de objetos de uma classe autoreferenciada, chamados de nós. - CORRETA
 
 
-Uma String forma uma estrutura de dados que corresponde a um array de caracteres.
+Uma String forma uma estrutura de dados que corresponde a um array de caracteres. - CORRETA
 
 
-O tamanho (quantidade de elementos) de uma lista encadeada deve ser definido na hora da criação.
+O tamanho (quantidade de elementos) de uma lista encadeada deve ser definido na hora da criação. - CORRETA
 
 
-De acordo com a teoria dos grafos, quando dois nós estão ligados por um arco, eles podem ser chamados de adjacentes.
+De acordo com a teoria dos grafos, quando dois nós estão ligados por um arco, eles podem ser chamados de adjacentes. - CORRETA
 
 
-A estrutura de dados Pilha apresenta uma estrutura no qual o primeiro elemento a ser inserido será o último a ser removido.
+A estrutura de dados Pilha apresenta uma estrutura no qual o primeiro elemento a ser inserido será o último a ser removido. - ESTÁ É A INCORRETA
+https://www.qconcursos.com/questoes-de-concursos/questoes/1c05ab65-e9
+
 
 Questão 26
 Em banco de dados, como pode ser descrito o objeto do tipo VIEW?
@@ -620,7 +625,7 @@ Uma view é uma stored procedure especial que é executa assim que determinado e
 
 
 
-Uma view é uma tabela virtual a qual retorna os resultados de um SQL pré-compilado.
+Uma view é uma tabela virtual a qual retorna os resultados de um SQL pré-compilado.- CORRETA
 
 
 
@@ -633,6 +638,8 @@ Uma view é uma tabela sem constrainsts.
 
 
 Nenhuma das anteriores.
+
+//https://www.devmedia.com.br/introducao-a-views/1614#:~:text=Uma%20view%20%C3%A9%20uma%20maneira,virtual%20ou%20uma%20consulta%20armazenada.
 
 Questão 27
 Dada uma matriz A=(ij) 2x2, qual seria a matriz resultante B caso o código a seguir fosse executado?
@@ -710,24 +717,29 @@ Imprimir os primeiros n números da sequência de Fibonacci em ordem contrária
 
 Nenhuma das alternativas acima.
 
+// https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/queue.html
+
+
+
 Questão 29
 Um banco de dados relacional é um banco de dados que modela os dados de uma forma que eles sejam percebidos pelo usuário como tabelas, ou mais formalmente relações.
 Sobre o modelo relacional, é INCORRETO afirmar que:
 
 
-Um banco de dados relacional consiste em uma coleção de tabelas, cada uma com um nome único atribuído.
+CERTA - Um banco de dados relacional consiste em uma coleção de tabelas, cada uma com um nome único atribuído.
 
 
-Na álgebra relacional, as operações de seleção, localização e união são chamadas de operações unárias por operarem em uma relação.
+INCORRETO - Na álgebra relacional, as operações de seleção, localização e união são chamadas de operações unárias por operarem em uma relação. - ESTÁ É A INCORRETA
 
 
-A linguagem SQL é uma linguagem de consulta amigável que possui como base formal a álgebra relacional.
+CERTA - A linguagem SQL é uma linguagem de consulta amigável que possui como base formal a álgebra relacional.
 
 
-A instância de um banco de dados corresponde ao instantâneo dos dados no banco de dados em um determinado instante de tempo.
+CERTA -  instância de um banco de dados corresponde ao instantâneo dos dados no banco de dados em um determinado instante de tempo.
 
 
 Nenhuma das afirmações acima.
+
 
 Questão 30
 Quais dos componentes a seguir fazem parte da arquitetura de um banco de dados ORACLE?
@@ -751,7 +763,8 @@ Tempfiles.
 
 
 
-Todos os mencionados.
+Todos os mencionados.- MARQUEI
+//http://www.bosontreinamentos.com.br/oracle-database/conceitos-de-arquitetura-de-bancos-de-dados-oracle/
 
 QUESTÃO BÔNUS
 Uma equipe da Fórmula 1 deseja calcular o número mínimo de litros que deverá colocar no tanque de um de seus carros para que ele possa percorrer um determinado número de voltas até o primeiro reabastecimento. Escreva um programa (EM QUALQUER LINGUAGEM) que leia o comprimento da pista (em metros), o número total de voltas a serem percorridas no grande prêmio, o número de reabastecimentos desejados e o consumo de combustível do carro (em Km/L). Calcular e escrever o número mínimo de litros necessários para percorrer até o primeiro reabastecimento. Considere que o número de voltas entre os reabastecimentos é o mesmo.
